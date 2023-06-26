@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.inc": "c",
+        "*.tcc": "c",
+        "cstdio": "c",
+        "exception": "c",
+        "optional": "c",
+        "random": "c",
+        "mutex": "c",
+        "new": "c",
+        "type_traits": "c"
+    }
+}
