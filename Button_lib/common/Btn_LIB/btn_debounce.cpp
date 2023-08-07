@@ -27,11 +27,11 @@ btn_debounce::~btn_debounce()
 {
 }
 
-int btn_debounce:: getState()
+bool btn_debounce:: getState()
 {
     return lastSteadyState;
 }
-int btn_debounce::getCurrentState(){
+bool btn_debounce::getCurrentState(){
 	return gpio_get_level(btn_pin);
 }
 

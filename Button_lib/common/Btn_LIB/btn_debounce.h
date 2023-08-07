@@ -19,17 +19,17 @@ private:
     unsigned long count;
     Mode_t countMode;
 
-    int previousSteadyState;  // the previous steady state from the input pin, used to detect pressed and released event
-    int lastSteadyState;      // the last steady state from the input pin
-    int lastFlickerableState; // the last flickerable state from the input pin
+    bool previousSteadyState;  // the previous steady state from the input pin, used to detect pressed and released event
+    bool lastSteadyState;      // the last steady state from the input pin
+    bool lastFlickerableState; // the last flickerable state from the input pin
 
     unsigned long lastDebounceTime; // the last time the output pin was toggled
 
 public:
     btn_debounce(gpio_num_t pin, unsigned long Time_debounce);
     ~btn_debounce();
-    int getState();
-    int getCurrentState();
+    bool getState();
+    bool getCurrentState();
     bool isPressed();
     bool isReleased();
     void setCountMode(Mode_t mode);
